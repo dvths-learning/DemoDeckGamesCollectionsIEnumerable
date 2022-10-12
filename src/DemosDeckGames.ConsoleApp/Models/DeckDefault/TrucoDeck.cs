@@ -3,7 +3,7 @@ namespace DemosDeckGames.ConsoleApp.Models.DeckDefault;
 public class TrucoDeck
     : DeckDefault
 {
-    protected override void InicializePlaingCards()
+    public override void InicializePlaingCards()
     {
         base.InicializePlaingCards();
 

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BBBF4FE4-A3BA-4ED3-8652-B0CC4FCFC15B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemosDeckGames.ConsoleApp", "src\DemosDeckGames.ConsoleApp\DemosDeckGames.ConsoleApp.csproj", "{EF28FA11-10AE-4F00-BF6C-A33ABE8E5109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemosDeckGames.ConsoleApp.Test", "src\DemosDeckGames.ConsoleApp.Test\DemosDeckGames.ConsoleApp.Test.csproj", "{461CAE3F-9ACD-46B6-BF57-795FE794ABEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF28FA11-10AE-4F00-BF6C-A33ABE8E5109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF28FA11-10AE-4F00-BF6C-A33ABE8E5109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF28FA11-10AE-4F00-BF6C-A33ABE8E5109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF28FA11-10AE-4F00-BF6C-A33ABE8E5109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461CAE3F-9ACD-46B6-BF57-795FE794ABEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461CAE3F-9ACD-46B6-BF57-795FE794ABEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461CAE3F-9ACD-46B6-BF57-795FE794ABEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461CAE3F-9ACD-46B6-BF57-795FE794ABEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF28FA11-10AE-4F00-BF6C-A33ABE8E5109} = {BBBF4FE4-A3BA-4ED3-8652-B0CC4FCFC15B}
+		{461CAE3F-9ACD-46B6-BF57-795FE794ABEC} = {BBBF4FE4-A3BA-4ED3-8652-B0CC4FCFC15B}
+	EndGlobalSection
+EndGlobal

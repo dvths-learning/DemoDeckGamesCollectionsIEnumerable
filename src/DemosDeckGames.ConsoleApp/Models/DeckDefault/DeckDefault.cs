@@ -15,8 +15,8 @@ public class DeckDefault
 
     }
 
-    // Protected Methods
-    protected virtual void InicializePlaingCards()
+    // Public Methods
+    public virtual void InicializePlaingCards()
     {
         // Obtem os valores do enum
         var suitArray = Enum.GetValues<Suit>();
@@ -37,14 +37,32 @@ public class DeckDefault
                 );
 
             // Cria as ultimas 3 cartas restantes Q, J, K  
-            cardsCollectionTemp.Add(new Cards{ Suit = suit, Symbol = "J", Value = 11 }); 
-            cardsCollectionTemp.Add(new Cards{ Suit = suit, Symbol = "Q", Value = 12 });
-            cardsCollectionTemp.Add(new Cards{ Suit = suit, Symbol = "K", Value = 13 });
+            cardsCollectionTemp.Add(new Cards { Suit = suit, Symbol = "J", Value = 11 });
+            cardsCollectionTemp.Add(new Cards { Suit = suit, Symbol = "Q", Value = 12 });
+            cardsCollectionTemp.Add(new Cards { Suit = suit, Symbol = "K", Value = 13 });
 
         }
         _cardsCollection = cardsCollectionTemp.ToArray();
     }
-    protected void MakeNewDeckGame(Cards[] cardCollection) {
+
+    public virtual void ShufleCards()
+    {
+        var random = new Random();
+
+        var shuffledcards = 
+            from card in CardsCollection
+            // gera um objeto anônimo 
+            select new {
+                Card = card,
+                Value = random.Next()
+            };
+        // Expression tree https://learn.microsoft.com/en-US/dotnet/csharp/programming-guide/concepts/expression-trees/
+        MakeNewDeckGame(shuffledcards.OrderBy(q => q.Value).Select(q => q.Card).ToArray());
+    }
+
+    //Protected Methods
+    protected void MakeNewDeckGame(Cards[] cardCollection)
+    {
         _cardsCollection = cardCollection;
     }
 
